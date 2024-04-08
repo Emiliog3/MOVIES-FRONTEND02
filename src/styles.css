@@ -1,0 +1,94 @@
+/* Para que haga efectos debemos linkearlo en el index.js */
+
+/* Estilos generales del body */
+body {
+    background-color: #212121; /* Color de fondo gris oscuro */
+    font-family: Arial, sans-serif; /* Fuente y familia de fuentes */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+}
+
+/* Estilos de la tarjeta */
+.card {
+    background-color: #fff; /* Color de fondo blanco */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(153, 7, 7, 0.1); /* Sombra */
+    margin: 22px; /* Margen externo */
+    padding: 2px; /* Relleno interno */
+    text-align: center; /* Alineación del texto al centro */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+    height: 1400px; /* Altura fija */
+}
+
+/* Efecto hover de la tarjeta */
+.card:hover {
+    box-shadow: 0 8px 16px rgba(231, 58, 58, 0.2); /* Sombra aumentada */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Estilos del botón de acción flotante */
+.fab {
+    background-color: #3b5998; /* Color de fondo azul */
+    color: #fff; /* Color del texto blanco */
+    border-radius: 100%; /* Borde redondeado */
+    bottom: 25px; /* Posición vertical */
+    font-size: 30px; /* Tamaño del icono */
+    padding: 25px; /* Relleno */
+    position: fixed; /* Posicionamiento fijo */
+    right: 25px; /* Posición horizontal */
+    box-shadow: 0 4px 8px rgba(153, 7, 7, 0.1); /* Sombra */
+    transition: all 0.3s; /* Transición suave */
+}
+
+/* Efecto hover del botón de acción flotante */
+.fab:hover {
+    background-color: #fff; /* Color de fondo blanco */
+    color: #3b5998; /* Color del texto azul */
+    box-shadow: 0 8px 16px rgba(233, 10, 10, 0.2); /* Sombra aumentada */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Estilos de la barra lateral. Donde se ingresa el nuevo inventario */
+.sidebar {
+    background-color: #404c5c; /* Color de fondo azul oscuro */
+    color: #fff; /* Color del texto blanco */
+    height: 100%; /* Altura */
+    position: fixed; /* Posicionamiento fijo */
+    top: 0; /* Posición vertical */
+    left: 0; /* Posición horizontal */
+    width: 100%; /* Ancho */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+    padding: 1rem 1.5rem; /* Relleno */
+    overflow-y: hidden; /* Ocultar desbordamiento vertical */
+}
+
+/* Estilos del encabezado de la barra lateral */
+.sidebar header {
+    display: flex; /* Mostrar como flexbox */
+    justify-content: space-between; /* Justificar el contenido */
+    align-items: center; /* Alinear elementos al centro */
+    padding: 1rem 0; /* Relleno */
+}
+
+/* Estilos del encabezado de la barra lateral */
+.sidebar-header {
+    display: flex; /* Mostrar como flexbox */
+    justify-content: space-between; /* Justificar el contenido */
+    align-items: center; /* Alinear elementos al centro */
+    padding: 1rem 0; /* Relleno */
+}
+
+/* Estilos del icono de cierre de la barra lateral */
+.fa-times {
+    cursor: pointer; /* Cursor de puntero */
+    font-size: 1.5rem; /* Tamaño del icono */
+    margin-right: 1rem; /* Margen derecho */
+}
+
+/* Estilos del título del encabezado de la barra lateral */
+.sidebar-header h3 {
+    margin: 0; /* Eliminar margen */
+}
+
+
+

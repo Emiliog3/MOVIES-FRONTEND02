@@ -1,0 +1,179 @@
+<input type="text" name="serial" className="form-control" required value={valoresForm.serial} onChange={handleInputChange} />
+
+
+Media new
+
+
+// Componente MediaNew para agregar una nueva película o media
+import React, { useState, useEffect } from 'react'; // Importar React, useState y useEffect de la librería react
+import { getDirector } from '../../services/directorService'; // Importar la función getDirector del archivo directorService
+import { getGenero } from '../../services/generoService'; // Importar la función getGenero del archivo generoService
+import { getTipo } from '../../services/tipoService'; // Importar la función getTipo del archivo tipoService
+import { getProductora } from '../../services/productoraService'; // Importar la función getProductora del archivo productoraService
+import { getMedia } from '../../services/mediaService';
+
+
+
+
+
+
+export const MediaNew = ({ handleOpenModal }) => {
+
+
+
+
+
+
+
+
+  return (
+    <div className="sidebar">
+      {/* Contenedor fluido para el formulario */}
+      <div className="container-fluid">
+        {/* Fila para el encabezado de la barra lateral */}
+        <div className="row">
+          <div className="col">
+            {/* Encabezado de la barra lateral */}
+            <div className="sidebar-header">
+              <h3>Nueva Película o Media</h3>
+              {/* Ícono de cierre de la barra lateral */}
+              <i className="fa-solid fa-times" onClick={handleOpenModal}></i>
+              {/* Es un evento que se dispara cuando se hace clic en el ícono */}
+              {/* https://fontawesome.com/icons/house?f=classic&s=solid */}{" "}
+              {/* <i className="fa-solid fa-house" onClick={handleOpenModal}></i> */} {/* Icono casa */}
+
+            </div>
+          </div>
+        </div>
+        {/* Fila para el formulario */}
+        <div className="row">
+          <div className="col">
+            <hr />
+            {/* Formulario para agregar una nueva película o media */}
+            <form>
+
+              {/* Primera fila del formulario */}
+              
+              <div className="row">
+                <div className="col">
+                  {/* Campo de entrada para el serial */}
+                  <div className="mb-3">
+                    <label className="form-label">Serial</label>
+                    <input type="text" name="serial" className="form-control" required />
+                    <div id="Help" className="form-text">Ingrese el serial</div>
+                  </div>
+                </div>
+                <div className="col">
+                  {/* Campo de entrada para el título */}
+                  <div className="mb-3">
+                    <label className="form-label">Titulo</label>
+                    <input type="text" name="titulo" className="form-control" />
+                    <div id="Help" className="form-text">Ingrese el Título</div>
+                  </div>
+                </div>
+                <div className="col">
+                  {/* Campo de entrada para la sinopsis */}
+                  <div className="mb-3">
+                    <label className="form-label">Sinopsis</label>
+                    <input type="text" name="sinopsis" className="form-control" />
+                    <div id="Help" className="form-text">Ingrese la sinopsis</div>
+                  </div>
+                </div>
+                <div className="col">
+                  {/* Campo de entrada para la URL */}
+                  <div className="mb-3">
+                    <label className="form-label">URL</label>
+                    <input type="text" name="url" className="form-control" />
+                    <div id="Help" className="form-text">Ingrese la URL</div>
+                  </div>
+                </div>
+              </div>
+              {/* Segunda fila del formulario */}
+              <div className="row">
+                <div className="col">
+                  {/* Campo de entrada para la imagen */}
+                  <div className="mb-3">
+                    <label className="form-label">URL de la Imagen</label>
+                    <input type="text" name="imagen" className="form-control" required />
+                    <div id="Help" className="form-text">Ingrese la URL de l imagen</div>
+                  </div>
+                </div>
+                <div className="col">
+                  {/* Campo de entrada para la fecha de estreno */}
+                  <div className="mb-3">
+                    <label className="form-label">Año de Estreno</label>
+                    <input type="text" name="anioEstreno" className="form-control" />
+                    <div id="Help" className="form-text">Ingrese la fecha de estreno</div>
+                  </div>
+                </div>
+                <div className="col">
+                  {/* Campo de selección para el género */}
+                  <div className="mb-3">
+                    <label className="form-label">Genero</label>
+                    <select className="form-control" name="genero" required>
+                      <option value="">Seleccione un género</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="col">
+                  {/* Campo de selección para el director */}
+                  <div className="mb-3">
+                    <label className="form-label">Director</label>
+                    <select className="form-control" name="director" required>
+                      <option value="">Seleccione un director</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              {/* Tercera fila del formulario */}
+              <div className="row">
+                <div className="col">
+                  {/* Campo de selección para la productora */}
+                  <div className="mb-3">
+                    <label className="form-label">Productora</label>
+                    <select className="form-control" name="productora" required>
+                      <option value="">Seleccione una productora</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="col">
+                  {/* Campo de selección para el tipo */}
+                  <div className="mb-3">
+                    <label className="form-label">Tipo</label>
+                    <select className="form-control" name="tipo" required>
+                      <option value="">Seleccione un tipo</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              {/* Botón para guardar */}
+
+              <div className="row">
+                <div className="col">
+                  <button type="submit" className="btn btn-primary">Guardar</button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+
+
+      // Agregamos un mensaje de error con SweetAlert2
+
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Hubo un problema al cargar los directores. Por favor, inténtalo de nuevo.'
+      });
+    }
+  }
+
+
