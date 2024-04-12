@@ -28,7 +28,8 @@ export const MediaCard = (props) => {
           <p className="card-text"> {"Tipo: " + media.tipo.nombre}</p>
           <p className="card-text"> {"Fecha de Creación: " + media.fechaCreacion}</p>
           <p className="card-text"> {"Fecha de Actualización: " + media.fechaActualizacion}</p>
-          <Link to={"/media/detalle/" + media._id} className="btn btn-primary">Ver detalle</Link>
+          <Link to={"/medias/edit/" + media._id} className="btn btn-primary">Editar</Link> {/* Se agrega un botón para editar */}
+
 
 
 

@@ -90,5 +90,19 @@ body {
     margin: 0; /* Eliminar margen */
 }
 
-
-
+/* Estilos para qeu el contenido se ajuste al tamaño de la pantalla */
+.sidebar-content {
+    display: flex; /* Mostrar como flexbox */
+    flex-direction: column; /* Dirección de la columna */
+    justify-content: center; /* Justificar el contenido */
+    align-items: center; /* Alinear elementos al centro */
+    height: 100%; /* Altura */
+}
+/* Estilo para que al abrir el registro la pantalla de una me aparezca en la parte superior y no en la inferior */
+.sidebar-content form {
+    display: flex; /* Mostrar como flexbox */
+    flex-direction: column; /* Dirección de la columna */
+    justify-content: center; /* Justificar el contenido */
+    align-items: center; /* Alinear elementos al centro */
+    height: 100%; /* Altura */
+}
