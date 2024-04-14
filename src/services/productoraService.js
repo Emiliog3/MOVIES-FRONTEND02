@@ -47,9 +47,21 @@ const eliminarProductora = (productoraId) => {
     });
 }
 
+// Funcion get genero Por Id
+
+const getProductoraPorId = (productoraId) => {
+    
+    return axiosInstance.get(`/productora/${productoraId}`, { // localhost:4000/productora/:productoraId
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+}
+
 export {
     getProductora,
     crearProductora,
     editarProductora,
     eliminarProductora,
+    getProductoraPorId,
 }

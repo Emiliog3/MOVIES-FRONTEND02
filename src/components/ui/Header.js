@@ -28,7 +28,7 @@ export const Header = () => {
 
             <li className="nav-item">
               {/* Enlace de navegación para la página de Géneros */}
-              <NavLink className="nav-link" exact to="/generos">Genero</NavLink>
+              <NavLink className="nav-link" exact to="/generos">Género</NavLink>
             </li>
 
             <li className="nav-item">

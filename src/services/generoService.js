@@ -46,10 +46,22 @@ const eliminarGenero = (generoId) => {
                 }
             });
 }
+
+
+// Funtion to get a genre por id
+
+const getGeneroPorId = (generoId) => {
+    return axiosInstance.get(`/genero/${generoId}`, { // localhost:4000/genero/:generoId
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+}
     
 export {
     getGenero,
     crearGenero,
     editarGenero,
     eliminarGenero,
+    getGeneroPorId
 }

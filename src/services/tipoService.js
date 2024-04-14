@@ -5,7 +5,6 @@ import { axiosInstance } from "../components/helper/axios-config";
 // Function to get all types
 
 const getTipo = () => {
-
     return axiosInstance.get('/tipo', { // localhost:4000/tipo
         headers: {
             'Content-Type': 'application/json',
@@ -16,19 +15,16 @@ const getTipo = () => {
 // Function to create a new type
 
 const crearTipo = (data) => {
-
     return axiosInstance.post('/tipo', data, { // localhost:4000/tipo
         headers: {
             'Content-Type': 'application/json',
         }
     });
-
 }
 
 // Function to update a type
 
 const editarTipo = (tipoId, data) => {
-
     return axiosInstance.put(`/tipo/${tipoId}`, data, {  // localhost:4000/tipo/:tipoId
         headers: {
             'Content-Type': 'application/json',
@@ -39,8 +35,17 @@ const editarTipo = (tipoId, data) => {
 // Function to delete a type
 
 const eliminarTipo = (tipoId) => {
-
     return axiosInstance.delete(`/tipo/${tipoId}`, { // localhost:4000/tipo/:tipoId
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+}
+
+// Function to get type by id
+
+const getTipoPorId = (tipoId) => {
+    return axiosInstance.get(`/tipo/${tipoId}`, { // localhost:4000/tipo/:tipoId
         headers: {
             'Content-Type': 'application/json',
         }
@@ -52,4 +57,5 @@ export {
     crearTipo,
     editarTipo,
     eliminarTipo,
+    getTipoPorId,
 }

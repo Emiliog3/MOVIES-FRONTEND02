@@ -2,10 +2,11 @@
 
 /* Estilos generales del body */
 body {
-    background-color: #212121; /* Color de fondo gris oscuro */
+    background-color: #000360; /* Color de fondo gris oscuro */
     font-family: Arial, sans-serif; /* Fuente y familia de fuentes */
     margin: 0; /* Elimina el margen */
     padding: 0; /* Elimina el relleno */
+    color: #fff;
 }
 
 /* Estilos de la tarjeta */
@@ -105,4 +106,24 @@ body {
     justify-content: center; /* Justificar el contenido */
     align-items: center; /* Alinear elementos al centro */
     height: 100%; /* Altura */
+}
+
+
+/* Estilos para centrar los títulos de las columnas */
+.table thead th {
+    text-align: center;
+    /* Centra el texto */
+}
+
+/* Estilos para centrar el texto en todas las celdas */
+.table tbody td {
+    text-align: center;
+    /* Centra el texto */
+}
+
+
+/* Estilos para hacer el texto blanco en los formularios */
+.form-label {
+    color: #fff;
+    /* Color del texto blanco */
 }

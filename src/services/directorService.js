@@ -45,10 +45,21 @@ const eliminarDirector = (directorId) => {
             }
         });
 }
+
+// Funtion to get a director por id
+
+const getDirectorPorId = (directorId) => {
+    return axiosInstance.get(`/director/${directorId}`, { // localhost:4000/director/:directorId
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+}
     
 export {
     getDirector,
     crearDirector,
     editarDirector,
     eliminarDirector,
+    getDirectorPorId
 }
